@@ -3,13 +3,19 @@
     <title></title>
     <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
         <customproperties/>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="stanice20141004101434441" name="stanice">
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="metro_stops_shp20141004120239482" name="metro-stops.shp">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="trat20141004100322766" name="trat">
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="dpp_stops20141004115416271" name="dpp-stops">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="podklad_modified20141004100030930" name="podklad_modified">
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="metro_lines20141004114751372" name="metro-lines">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="stanice20141004101434441" name="stanice">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="podklad_modified20141004100030930" name="podklad_modified">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="podklad20141004095556378" name="podklad">
@@ -18,18 +24,15 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="OpenLayers_plugin_layer20141004095131894" name="Google Streets">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="zamestnani20141004095039636" name="zamestnani">
-            <customproperties/>
-        </layer-tree-layer>
     </layer-tree-group>
     <relations/>
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>1593127.77098090248182416</xmin>
-            <ymin>6441955.74310997314751148</ymin>
-            <xmax>1622102.08131851488724351</xmax>
-            <ymax>6459062.70771551318466663</ymax>
+            <xmin>1592503.24148876732215285</xmin>
+            <ymin>6450923.97086697537451982</ymin>
+            <xmax>1621477.55182638624683022</xmax>
+            <ymax>6470349.49051410052925348</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -46,37 +49,54 @@
         </destinationsrs>
         <layer_coordinate_transform_info>
             <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="podklad20141004095556378"/>
+            <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="dpp_lines_metro20141004114544455"/>
             <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="trat20141004100322766"/>
             <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="zamestnani20141004095039636"/>
+            <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="metro_lines_shp20141004114739920"/>
+            <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="dpp_stops20141004115416271"/>
+            <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="stops20141004115204129"/>
             <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="OpenLayers_plugin_layer20141004095131894"/>
+            <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="metro_stops_shp20141004120239482"/>
+            <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="metro_lines20141004114751372"/>
             <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="podklad_modified20141004100030930"/>
             <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="stanice20141004101434441"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
     <layer-tree-canvas>
         <custom-order enabled="0">
-            <item>zamestnani20141004095039636</item>
-            <item>OpenLayers_plugin_layer20141004095131894</item>
-            <item>podklad20141004095556378</item>
-            <item>podklad_modified20141004100030930</item>
-            <item>trat20141004100322766</item>
             <item>stanice20141004101434441</item>
+            <item>podklad_modified20141004100030930</item>
+            <item>podklad20141004095556378</item>
+            <item>OpenLayers_plugin_layer20141004095131894</item>
+            <item>metro_lines20141004114751372</item>
+            <item>dpp_stops20141004115416271</item>
+            <item>metro_stops_shp20141004120239482</item>
         </custom-order>
     </layer-tree-canvas>
     <legend updateDrawingOrder="true">
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="stanice" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="metro-stops.shp" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="stanice20141004101434441" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="metro_stops_shp20141004120239482" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="trat" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="dpp-stops" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="trat20141004100322766" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="dpp_stops20141004115416271" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="podklad_modified" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="metro-lines" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="podklad_modified20141004100030930" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="metro_lines20141004114751372" visible="1"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="stanice" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="stanice20141004101434441" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="podklad_modified" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="podklad_modified20141004100030930" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="podklad" showFeatureCount="0">
@@ -89,39 +109,11 @@
                 <legendlayerfile isInOverview="0" layerid="OpenLayers_plugin_layer20141004095131894" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="zamestnani" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="zamestnani20141004095039636" visible="0"/>
-            </filegroup>
-        </legendlayer>
     </legend>
-    <mapcanvas>
-        <units>degrees</units>
-        <extent>
-            <xmin>157.8037931034475605</xmin>
-            <ymin>-448.30275862069004233</ymin>
-            <xmax>902.65896551724176788</xmax>
-            <ymax>-45.3027586206894739</ymax>
-        </extent>
-        <projections>0</projections>
-        <destinationsrs>
-            <spatialrefsys>
-                <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-                <srsid>3452</srsid>
-                <srid>4326</srid>
-                <authid>EPSG:4326</authid>
-                <description>WGS 84</description>
-                <projectionacronym>longlat</projectionacronym>
-                <ellipsoidacronym>WGS84</ellipsoidacronym>
-                <geographicflag>true</geographicflag>
-            </spatialrefsys>
-        </destinationsrs>
-        <layer_coordinate_transform_info/>
-    </mapcanvas>
-    <projectlayers layercount="6">
+    <projectlayers layercount="7">
         <maplayer minimumScale="0" maximumScale="1e+08" type="plugin" hasScaleBasedVisibilityFlag="0" name="openlayers">
             <id>OpenLayers_plugin_layer20141004095131894</id>
-            <datasource></datasource>
+            <datasource>.</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -143,6 +135,325 @@
             <customproperties>
                 <property key="ol_layer_type" value="Google Streets"/>
             </customproperties>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+            <id>dpp_stops20141004115416271</id>
+            <datasource>./dpp-stops.shp</datasource>
+            <title></title>
+            <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
+            <layername>dpp-stops</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+                    <srsid>3452</srsid>
+                    <srid>4326</srid>
+                    <authid>EPSG:4326</authid>
+                    <description>WGS 84</description>
+                    <projectionacronym>longlat</projectionacronym>
+                    <ellipsoidacronym>WGS84</ellipsoidacronym>
+                    <geographicflag>true</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <provider encoding="UTF-8">ogr</provider>
+            <previewExpression>COALESCE( "stop_name", '&lt;NULL>' )</previewExpression>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
+                <symbols>
+                    <symbol alpha="1" type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="168,163,126,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="horizontal_anchor_point" v="1"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="offset_map_unit_scale" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_style" v="solid"/>
+                            <prop k="outline_width" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="scale_method" v="area"/>
+                            <prop k="size" v="2"/>
+                            <prop k="size_map_unit_scale" v="0,0"/>
+                            <prop k="size_unit" v="MM"/>
+                            <prop k="vertical_anchor_point" v="1"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation/>
+                <sizescale scalemethod="area"/>
+            </renderer-v2>
+            <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
+            <displayfield>stop_name</displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Popisek"/>
+                <family fieldname="" name="MS Shell Dlg 2"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <edittypes>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="stop_id">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="stop_name">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="stop_lat">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="stop_lon">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="location_t">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="parent_sta">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
+            <editform></editform>
+            <editforminit></editforminit>
+            <featformsuppress>0</featformsuppress>
+            <annotationform></annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+            <id>metro_lines20141004114751372</id>
+            <datasource>./metro-lines.shp</datasource>
+            <title></title>
+            <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
+            <layername>metro-lines</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+                    <srsid>3452</srsid>
+                    <srid>4326</srid>
+                    <authid>EPSG:4326</authid>
+                    <description>WGS 84</description>
+                    <projectionacronym>longlat</projectionacronym>
+                    <ellipsoidacronym>WGS84</ellipsoidacronym>
+                    <geographicflag>true</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <provider encoding="UTF-8">ogr</provider>
+            <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
+                <symbols>
+                    <symbol alpha="1" type="line" name="0">
+                        <layer pass="0" class="SimpleLine" locked="0">
+                            <prop k="capstyle" v="square"/>
+                            <prop k="color" v="8,64,168,255"/>
+                            <prop k="customdash" v="5;2"/>
+                            <prop k="customdash_map_unit_scale" v="0,0"/>
+                            <prop k="customdash_unit" v="MM"/>
+                            <prop k="draw_inside_polygon" v="0"/>
+                            <prop k="joinstyle" v="bevel"/>
+                            <prop k="offset" v="0"/>
+                            <prop k="offset_map_unit_scale" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="penstyle" v="solid"/>
+                            <prop k="use_custom_dash" v="0"/>
+                            <prop k="width" v="0.26"/>
+                            <prop k="width_map_unit_scale" v="0,0"/>
+                            <prop k="width_unit" v="MM"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation/>
+                <sizescale scalemethod="area"/>
+            </renderer-v2>
+            <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
+            <displayfield>id</displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Popisek"/>
+                <family fieldname="" name="MS Shell Dlg 2"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <edittypes>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="id">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="shape_id">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="shape_pt_l">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="shape_pt_1">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="shape_pt_s">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
+            <editform></editform>
+            <editforminit></editforminit>
+            <featformsuppress>0</featformsuppress>
+            <annotationform></annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+            <id>metro_stops_shp20141004120239482</id>
+            <datasource>./metro-stops.shp</datasource>
+            <title></title>
+            <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
+            <layername>metro-stops.shp</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+                    <srsid>3452</srsid>
+                    <srid>4326</srid>
+                    <authid>EPSG:4326</authid>
+                    <description>WGS 84</description>
+                    <projectionacronym>longlat</projectionacronym>
+                    <ellipsoidacronym>WGS84</ellipsoidacronym>
+                    <geographicflag>true</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <provider encoding="UTF-8">ogr</provider>
+            <previewExpression></previewExpression>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
+                <symbols>
+                    <symbol alpha="1" type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="16,172,29,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="horizontal_anchor_point" v="1"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="offset_map_unit_scale" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_style" v="solid"/>
+                            <prop k="outline_width" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="scale_method" v="area"/>
+                            <prop k="size" v="2"/>
+                            <prop k="size_map_unit_scale" v="0,0"/>
+                            <prop k="size_unit" v="MM"/>
+                            <prop k="vertical_anchor_point" v="1"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation/>
+                <sizescale scalemethod="area"/>
+            </renderer-v2>
+            <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
+            <displayfield>stop_name</displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Popisek"/>
+                <family fieldname="" name="MS Shell Dlg 2"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <edittypes>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="stop_id">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="stop_name">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="stop_lat">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="stop_lon">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="location_t">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="parent_sta">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="id">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="name">
+                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+                </edittype>
+            </edittypes>
+            <editform></editform>
+            <editforminit></editforminit>
+            <featformsuppress>0</featformsuppress>
+            <annotationform></annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
             <id>podklad20141004095556378</id>
@@ -302,224 +613,17 @@
                 <selectedonly on=""/>
             </labelattributes>
             <edittypes>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="id">
+                <edittype labelontop="0" editable="1" widgetv2type="TextEdit" name="id">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="name">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-            </edittypes>
-            <editform></editform>
-            <editforminit></editforminit>
-            <featformsuppress>0</featformsuppress>
-            <annotationform></annotationform>
-            <editorlayout>generatedlayout</editorlayout>
-            <excludeAttributesWMS/>
-            <excludeAttributesWFS/>
-            <attributeactions/>
-        </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-            <id>trat20141004100322766</id>
-            <datasource>./trat.shp</datasource>
-            <title></title>
-            <abstract></abstract>
-            <keywordList>
-                <value></value>
-            </keywordList>
-            <layername>trat</layername>
-            <srs>
-                <spatialrefsys>
-                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-                    <srsid>3452</srsid>
-                    <srid>4326</srid>
-                    <authid>EPSG:4326</authid>
-                    <description>WGS 84</description>
-                    <projectionacronym>longlat</projectionacronym>
-                    <ellipsoidacronym>WGS84</ellipsoidacronym>
-                    <geographicflag>true</geographicflag>
-                </spatialrefsys>
-            </srs>
-            <provider encoding="UTF-8">ogr</provider>
-            <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
-            <vectorjoins/>
-            <renderer-v2 symbollevels="0" type="singleSymbol">
-                <symbols>
-                    <symbol alpha="1" type="line" name="0">
-                        <layer pass="0" class="SimpleLine" locked="0">
-                            <prop k="capstyle" v="square"/>
-                            <prop k="color" v="156,242,85,255"/>
-                            <prop k="customdash" v="5;2"/>
-                            <prop k="customdash_map_unit_scale" v="0,0"/>
-                            <prop k="customdash_unit" v="MM"/>
-                            <prop k="draw_inside_polygon" v="0"/>
-                            <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="0"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
-                            <prop k="penstyle" v="solid"/>
-                            <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.26"/>
-                            <prop k="width_map_unit_scale" v="0,0"/>
-                            <prop k="width_unit" v="MM"/>
-                        </layer>
-                    </symbol>
-                </symbols>
-                <rotation/>
-                <sizescale scalemethod="area"/>
-            </renderer-v2>
-            <customproperties/>
-            <blendMode>0</blendMode>
-            <featureBlendMode>0</featureBlendMode>
-            <layerTransparency>0</layerTransparency>
-            <displayfield>id</displayfield>
-            <label>0</label>
-            <labelattributes>
-                <label fieldname="" text="Label"/>
-                <family fieldname="" name="MS Shell Dlg 2"/>
-                <size fieldname="" units="pt" value="12"/>
-                <bold fieldname="" on="0"/>
-                <italic fieldname="" on="0"/>
-                <underline fieldname="" on="0"/>
-                <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="0" blue="0" green="0"/>
-                <x fieldname=""/>
-                <y fieldname=""/>
-                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-                <angle fieldname="" value="0" auto="0"/>
-                <alignment fieldname="" value="center"/>
-                <buffercolor fieldname="" red="255" blue="255" green="255"/>
-                <buffersize fieldname="" units="pt" value="1"/>
-                <bufferenabled fieldname="" on=""/>
-                <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
-            </labelattributes>
-            <edittypes>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="id">
+                <edittype labelontop="0" editable="1" widgetv2type="TextEdit" name="name">
                     <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
                 </edittype>
             </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
-            <annotationform></annotationform>
-            <editorlayout>generatedlayout</editorlayout>
-            <excludeAttributesWMS/>
-            <excludeAttributesWFS/>
-            <attributeactions/>
-        </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-            <id>zamestnani20141004095039636</id>
-            <datasource>../../demograf-mapy/data/shapefiles/zamestnani.shp</datasource>
-            <title></title>
-            <abstract></abstract>
-            <keywordList>
-                <value></value>
-            </keywordList>
-            <layername>zamestnani</layername>
-            <srs>
-                <spatialrefsys>
-                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-                    <srsid>3452</srsid>
-                    <srid>4326</srid>
-                    <authid>EPSG:4326</authid>
-                    <description>WGS 84</description>
-                    <projectionacronym>longlat</projectionacronym>
-                    <ellipsoidacronym>WGS84</ellipsoidacronym>
-                    <geographicflag>true</geographicflag>
-                </spatialrefsys>
-            </srs>
-            <provider encoding="UTF-8">ogr</provider>
-            <previewExpression></previewExpression>
-            <vectorjoins/>
-            <renderer-v2 symbollevels="0" type="singleSymbol">
-                <symbols>
-                    <symbol alpha="1" type="fill" name="0">
-                        <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="border_width_map_unit_scale" v="0,0"/>
-                            <prop k="border_width_unit" v="MM"/>
-                            <prop k="color" v="214,205,104,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
-                            <prop k="style" v="solid"/>
-                            <prop k="style_border" v="solid"/>
-                            <prop k="width_border" v="0.26"/>
-                        </layer>
-                    </symbol>
-                </symbols>
-                <rotation/>
-                <sizescale scalemethod="area"/>
-            </renderer-v2>
-            <customproperties/>
-            <blendMode>0</blendMode>
-            <featureBlendMode>0</featureBlendMode>
-            <layerTransparency>0</layerTransparency>
-            <displayfield>NAZOB</displayfield>
-            <label>0</label>
-            <labelattributes>
-                <label fieldname="" text="Label"/>
-                <family fieldname="" name="MS Shell Dlg 2"/>
-                <size fieldname="" units="pt" value="12"/>
-                <bold fieldname="" on="0"/>
-                <italic fieldname="" on="0"/>
-                <underline fieldname="" on="0"/>
-                <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="0" blue="0" green="0"/>
-                <x fieldname=""/>
-                <y fieldname=""/>
-                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-                <angle fieldname="" value="0" auto="0"/>
-                <alignment fieldname="" value="center"/>
-                <buffercolor fieldname="" red="255" blue="255" green="255"/>
-                <buffersize fieldname="" units="pt" value="1"/>
-                <bufferenabled fieldname="" on=""/>
-                <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
-            </labelattributes>
-            <edittypes>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="NAZOB">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="NAZMC">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="vzdelani_z">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="vzdelani_s">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="vzdelani_m">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="vzdelani_v">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="prace_stud">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="nezamestna">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="mira_nez_1">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="zamestna_1">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="podnikatel">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-                <edittype labelontop="0" editable="0" widgetv2type="TextEdit" name="osvc_prc">
-                    <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-                </edittype>
-            </edittypes>
-            <editform></editform>
-            <editforminit></editforminit>
-            <featformsuppress>0</featformsuppress>
-            <annotationform></annotationform>
+            <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
@@ -569,14 +673,14 @@
         </Gui>
         <Digitizing>
             <LayerSnappingList type="QStringList">
-                <value>zamestnani20141004095039636</value>
-                <value>trat20141004100322766</value>
                 <value>stanice20141004101434441</value>
+                <value>metro_lines20141004114751372</value>
+                <value>dpp_stops20141004115416271</value>
             </LayerSnappingList>
             <LayerSnappingEnabledList type="QStringList">
                 <value>disabled</value>
-                <value>disabled</value>
-                <value>disabled</value>
+                <value>enabled</value>
+                <value>enabled</value>
             </LayerSnappingEnabledList>
             <AvoidIntersectionsList type="QStringList"/>
             <LayerSnappingToleranceUnitList type="QStringList">
@@ -586,8 +690,8 @@
             </LayerSnappingToleranceUnitList>
             <LayerSnapToList type="QStringList">
                 <value>to_vertex_and_segment</value>
-                <value>to_vertex_and_segment</value>
-                <value>to_vertex_and_segment</value>
+                <value>to_vertex</value>
+                <value>to_vertex</value>
             </LayerSnapToList>
             <LayerSnappingToleranceList type="QStringList">
                 <value>0.000000</value>
