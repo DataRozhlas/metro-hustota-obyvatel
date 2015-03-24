@@ -33,12 +33,23 @@ metroColors =
 color = d3.scale.quantile!
   ..domain ig.data.grid.features.map (.properties.SUMu111100)
   ..range ['rgb(255,247,251)','rgb(236,231,242)','rgb(208,209,230)','rgb(166,189,219)','rgb(116,169,207)','rgb(54,144,192)','rgb(5,112,176)','rgb(4,90,141)','rgb(2,56,88)']
+
+darkColors = ['rgb(54,144,192)','rgb(5,112,176)','rgb(4,90,141)','rgb(2,56,88)']
 hexes = L.geoJson do
   * ig.data.grid
   * style: (feature) ->
-      color: color feature.properties.SUMu111100
+      fillColor = color feature.properties.SUMu111100
       fillOpacity: 0.8
+      fillColor: fillColor
+      color: if fillColor in darkColors then \#fff else "rgb(2,56,88)"
       weight: 0
+    onEachFeature: (feature, layer) ->
+      layer.on \mouseover ->
+        layer.setStyle weight: 1
+        infobox.setFeature feature
+      layer.on \mouseout ->
+        layer.setStyle weight: 0
+        infobox.reset!
 
 hexes.addTo map
 
@@ -64,3 +75,4 @@ for stop in ig.data.'metro-stops'.features
       fillOpacity: 1
   marker.addTo map
 
+infobox = new ig.Infobox container
