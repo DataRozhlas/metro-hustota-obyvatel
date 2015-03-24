@@ -23,3 +23,20 @@ labelLayer = L.tileLayer do
 map
   ..addLayer baseLayer
   ..addLayer labelLayer
+
+metroColors =
+  0: \#143487
+  9: \#03A86B
+  18: \#FAB32E
+  32: \#D11F42
+
+lines = L.geoJson do
+  * ig.data.'metro-lines'
+  * style: (feature) ->
+      id = feature.properties.shape_id
+      if id is null then id = 9
+      opacity: 0.8
+      weight: 7
+      color: metroColors[id]
+
+lines.addTo map
