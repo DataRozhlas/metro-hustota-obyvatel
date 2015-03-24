@@ -37,7 +37,7 @@ hexes = L.geoJson do
   * ig.data.grid
   * style: (feature) ->
       color: color feature.properties.SUMu111100
-      fillOpacity: 0.5
+      fillOpacity: 0.8
       weight: 0
 
 hexes.addTo map
@@ -47,7 +47,7 @@ lines = L.geoJson do
   * style: (feature) ->
       id = feature.properties.shape_id
       if id is null then id = 9
-      opacity: 0.8
+      opacity: 1
       weight: 7
       color: metroColors[id]
 
