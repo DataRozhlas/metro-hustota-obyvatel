@@ -40,3 +40,15 @@ lines = L.geoJson do
       color: metroColors[id]
 
 lines.addTo map
+
+L.Icon.Default.imagePath = "https://samizdat.cz/tools/leaflet/images/"
+for stop in ig.data.'metro-stops'.features
+  marker = L.circleMarker do
+    * [stop.geometry.coordinates.1, stop.geometry.coordinates.0]
+    * radius: 5
+      color: \black
+      fillColor: \white
+      opacity: 1
+      fillOpacity: 1
+  marker.addTo map
+
