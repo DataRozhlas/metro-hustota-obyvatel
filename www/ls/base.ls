@@ -30,6 +30,18 @@ metroColors =
   18: \#FAB32E
   32: \#D11F42
 
+color = d3.scale.quantile!
+  ..domain ig.data.grid.features.map (.properties.SUMu111100)
+  ..range ['rgb(255,247,251)','rgb(236,231,242)','rgb(208,209,230)','rgb(166,189,219)','rgb(116,169,207)','rgb(54,144,192)','rgb(5,112,176)','rgb(4,90,141)','rgb(2,56,88)']
+hexes = L.geoJson do
+  * ig.data.grid
+  * style: (feature) ->
+      color: color feature.properties.SUMu111100
+      fillOpacity: 0.5
+      weight: 0
+
+hexes.addTo map
+
 lines = L.geoJson do
   * ig.data.'metro-lines'
   * style: (feature) ->
