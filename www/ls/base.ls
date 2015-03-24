@@ -4,7 +4,7 @@ mapElement = container.append \div
 map = L.map do
   * mapElement.node!
   * minZoom: 11,
-    maxZoom: 18,
+    maxZoom: 16,
     zoom: 11
     center: [50.0845, 14.496]
     maxBounds: [[49.89,14.14], [50.23,15.04]]
