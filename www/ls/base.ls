@@ -37,33 +37,34 @@ for hex in d3.csv.parse ig.data.obyv
     hex[field] = parseFloat hex[field]
     if field != "" and field != "hexID"
       allValues.push hex[field]
+  hex.diff = hex['2014/12'] - (hex['2001/12'] || 0)
   obyvToHex[hex.hexID] = hex
 
 for feature in ig.data.grid.features
   feature.obyv = obyvToHex[feature.properties.hexID]
 
 allValues.sort (a, b) -> a - b
-
-color = d3.scale.quantile!
+colorYear = d3.scale.quantile!
   ..domain allValues
   ..range ['rgb(255,247,251)','rgb(236,231,242)','rgb(208,209,230)','rgb(166,189,219)','rgb(116,169,207)','rgb(54,144,192)','rgb(5,112,176)','rgb(4,90,141)','rgb(2,56,88)']
 
+colorDiff = d3.scale.linear!
+  ..domain [-3000 -500 -150 0 150 500 4000]
+  ..range ['rgb(215,48,39)','rgb(252,141,89)','rgb(254,224,139)','rgb(255,255,191)','rgb(217,239,139)','rgb(145,207,96)','rgb(26,152,80)']
+
+color = colorYear
 
 toDisplay = "2014/12"
-toDisplay = "2001/12"
-values = for feature in ig.data.grid.features
-  feature.value = feature.obyv?[toDisplay] || 0
 
-
-darkColors = ['rgb(54,144,192)','rgb(5,112,176)','rgb(4,90,141)','rgb(2,56,88)']
+hexStyle = (feature) ->
+  fillColor = color (feature.obyv?[toDisplay] || 0)
+  fillOpacity: 0.8
+  fillColor: fillColor
+  color: \#000
+  weight: 0
 hexes = L.geoJson do
   * ig.data.grid
-  * style: (feature) ->
-      fillColor = color feature.value
-      fillOpacity: 0.8
-      fillColor: fillColor
-      color: if fillColor in darkColors then \#fff else "rgb(2,56,88)"
-      weight: 0
+  * style: hexStyle
     onEachFeature: (feature, layer) ->
       layer.on \mouseover ->
         layer.setStyle weight: 1
@@ -73,6 +74,16 @@ hexes = L.geoJson do
         infobox.reset!
 
 hexes.addTo map
+
+drawYear = (year) ->
+  color := colorYear
+  toDisplay := "#{year}/12"
+  hexes.setStyle hexStyle
+
+drawDiff = ->
+  color := colorDiff
+  toDisplay := "diff"
+  hexes.setStyle hexStyle
 
 lines = L.geoJson do
   * ig.data.'metro-lines'
