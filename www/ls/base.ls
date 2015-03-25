@@ -96,14 +96,23 @@ lines = L.geoJson do
 lines.addTo map
 
 L.Icon.Default.imagePath = "https://samizdat.cz/tools/leaflet/images/"
-for stop in ig.data.'metro-stops'.features
+graphTip = new ig.GraphTip mapElement
+for let stop in ig.data.'metro-stops'.features
+  latlng = L.latLng [stop.geometry.coordinates.1, stop.geometry.coordinates.0]
   marker = L.circleMarker do
-    * [stop.geometry.coordinates.1, stop.geometry.coordinates.0]
+    * latlng
     * radius: 5
       color: \black
       fillColor: \white
       opacity: 1
       fillOpacity: 1
+  marker.on \mouseover ->
+    {x, y} = map.latLngToContainerPoint latlng
+    graphTip.display x, (y - 8), stop.properties.nazev
+  marker.on \mouseout ->
+    graphTip.hide!
+
+
   marker.addTo map
 
 infobox = new ig.Infobox container
