@@ -7,7 +7,7 @@ class ig.Infobox
     @reset!
 
   setFeature: (feature) ->
-    @content.html "Ve zvýrazněné oblasti žije #{ig.utils.formatNumber feature.properties.SUMu111100} obyvatel"
+    @content.html "Ve zvýrazněné oblasti žije #{ig.utils.formatNumber feature.value} obyvatel"
 
   reset: ->
     @content.html "Najeďte myší na oblast a zobrazí se vám počet obyvatel, kteří v ní žijí"

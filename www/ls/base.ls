@@ -30,15 +30,36 @@ metroColors =
   18: \#FAB32E
   32: \#D11F42
 
+obyvToHex = {}
+allValues = []
+for hex in d3.csv.parse ig.data.obyv
+  for field, value of hex
+    hex[field] = parseFloat hex[field]
+    if field != "" and field != "hexID"
+      allValues.push hex[field]
+  obyvToHex[hex.hexID] = hex
+
+for feature in ig.data.grid.features
+  feature.obyv = obyvToHex[feature.properties.hexID]
+
+allValues.sort (a, b) -> a - b
+
 color = d3.scale.quantile!
-  ..domain ig.data.grid.features.map (.properties.SUMu111100)
+  ..domain allValues
   ..range ['rgb(255,247,251)','rgb(236,231,242)','rgb(208,209,230)','rgb(166,189,219)','rgb(116,169,207)','rgb(54,144,192)','rgb(5,112,176)','rgb(4,90,141)','rgb(2,56,88)']
+
+
+toDisplay = "2014/12"
+toDisplay = "2001/12"
+values = for feature in ig.data.grid.features
+  feature.value = feature.obyv?[toDisplay] || 0
+
 
 darkColors = ['rgb(54,144,192)','rgb(5,112,176)','rgb(4,90,141)','rgb(2,56,88)']
 hexes = L.geoJson do
   * ig.data.grid
   * style: (feature) ->
-      fillColor = color feature.properties.SUMu111100
+      fillColor = color feature.value
       fillOpacity: 0.8
       fillColor: fillColor
       color: if fillColor in darkColors then \#fff else "rgb(2,56,88)"
