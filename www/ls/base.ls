@@ -116,3 +116,5 @@ for let stop in ig.data.'metro-stops'.features
   marker.addTo map
 
 infobox = new ig.Infobox container
+
+ig.legend = new ig.Legend container, ig.data.grid.features

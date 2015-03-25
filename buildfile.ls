@@ -16,7 +16,7 @@ externalData =
   "metro-lines": "#__dirname/data/viz/metro-lines.geojson"
   "metro-stops": "#__dirname/data/viz/metro-stops.geojson"
 
-preferScripts = <[ postInit.js _loadData.js ../data.js init.js _loadExternal.js]>
+preferScripts = <[ utils.js postInit.js _loadData.js ../data.js init.js _loadExternal.js]>
 deferScripts = <[ Graph.js base.js ]>
 develOnlyScripts = <[ _loadData.js _loadExternal.js]>
 gzippable = <[ www/index.deploy.html www/script.deploy.js ]>

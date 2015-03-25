@@ -14,9 +14,15 @@ class ig.Infobox
               ..attr \checked (d, i) -> if i == 1 then "checked" else void
               ..on \change ->
                   switch @value
-                    | "Rok 2001" => ig.drawYear 2001
-                    | "Rok 2014" => ig.drawYear 2014
-                    | "Rozdíl" => ig.drawDiff!
+                    | "Rok 2001" =>
+                      ig.legend.setCount yes
+                      ig.drawYear 2001
+                    | "Rok 2014" =>
+                      ig.legend.setCount yes
+                      ig.drawYear 2014
+                    | "Rozdíl" =>
+                      ig.legend.setCount no
+                      ig.drawDiff!
             ..append \label
               ..html -> it
               ..attr \for (d, i) -> "chc-#i"
