@@ -75,12 +75,12 @@ hexes = L.geoJson do
 
 hexes.addTo map
 
-drawYear = (year) ->
+ig.drawYear = (year) ->
   color := colorYear
   toDisplay := "#{year}/12"
   hexes.setStyle hexStyle
 
-drawDiff = ->
+ig.drawDiff = ->
   color := colorDiff
   toDisplay := "diff"
   hexes.setStyle hexStyle
