@@ -52,9 +52,8 @@ colorDiff = d3.scale.linear!
   ..domain [-3000 -500 -150 0 150 500 4000]
   ..range ['rgb(215,48,39)','rgb(252,141,89)','rgb(254,224,139)','rgb(255,255,191)','rgb(217,239,139)','rgb(145,207,96)','rgb(26,152,80)']
 
-color = colorYear
-
-toDisplay = "2014/12"
+color = colorDiff
+toDisplay = "diff"
 
 hexStyle = (feature) ->
   fillColor = color (feature.obyv?[toDisplay] || 0)

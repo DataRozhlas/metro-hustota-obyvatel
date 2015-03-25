@@ -11,7 +11,7 @@ class ig.Infobox
               ..attr \value -> it
               ..attr \name \backgroundSelector
               ..attr \id (d, i) -> "chc-#i"
-              ..attr \checked (d, i) -> if i == 2 then "checked" else void
+              ..attr \checked (d, i) -> if i == 1 then "checked" else void
               ..on \change ->
                   switch @value
                     | "Rok 2001" => ig.drawYear 2001
