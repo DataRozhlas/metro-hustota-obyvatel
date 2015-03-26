@@ -12,7 +12,6 @@ externalStyles =
 
 externalData =
   "grid": "#__dirname/data/viz/grid.geojson"
-  "obyv": "#__dirname/data/hex_obyv_table_merc.csv"
   "metro-lines": "#__dirname/data/viz/metro-lines.geojson"
   "metro-stops": "#__dirname/data/viz/metro-stops.geojson"
 

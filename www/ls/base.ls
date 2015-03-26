@@ -30,18 +30,12 @@ metroColors =
   18: \#FAB32E
   32: \#D11F42
 
-obyvToHex = {}
 allValues = []
-for hex in d3.csv.parse ig.data.obyv
-  for field, value of hex
-    hex[field] = parseFloat hex[field]
-    if field != "" and field != "hexID"
-      allValues.push hex[field]
-  hex.diff = hex['2014/12'] - (hex['2001/12'] || 0)
-  obyvToHex[hex.hexID] = hex
 
 for feature in ig.data.grid.features
-  feature.obyv = obyvToHex[feature.properties.hexID]
+  allValues.push feature.properties['obyv_2014']
+  allValues.push feature.properties['obyv_2001'] if feature.properties['obyv_2001']
+  feature.properties.diff = feature.properties['obyv_2014'] - (feature.properties['obyv_2001'] || 0)
 
 allValues.sort (a, b) -> a - b
 colorYear = d3.scale.quantile!
@@ -56,7 +50,7 @@ color = colorDiff
 toDisplay = "diff"
 
 hexStyle = (feature) ->
-  fillColor = color (feature.obyv?[toDisplay] || 0)
+  fillColor = color (feature.properties?[toDisplay] || 0)
   fillOpacity: 0.8
   fillColor: fillColor
   color: \#000
@@ -76,7 +70,7 @@ hexes.addTo map
 
 ig.drawYear = (year) ->
   color := colorYear
-  toDisplay := "#{year}/12"
+  toDisplay := "#{year}"
   hexes.setStyle hexStyle
 
 ig.drawDiff = ->

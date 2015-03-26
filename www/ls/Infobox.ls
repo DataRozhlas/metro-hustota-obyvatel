@@ -30,12 +30,12 @@ class ig.Infobox
     @reset!
 
   setFeature: (feature) ->
-    direction = if feature.obyv.diff < 0 then "úbytek" else "přírustek"
+    direction = if feature.properties.diff < 0 then "úbytek" else "přírustek"
     @content.html """Ve zvýrazněné oblasti žije
-    <b>#{ig.utils.formatNumber feature.obyv['2014/12'] || 0}</b> obyvatel.
+    <b>#{ig.utils.formatNumber feature.properties['obyv_2014'] || 0}</b> obyvatel.
     V roce 2001 zde žilo
-    <b>#{ig.utils.formatNumber feature.obyv['2001/12'] || 0}</b> lidí,
-    je tu tedy <b>#direction #{ig.utils.formatNumber Math.abs feature.obyv.diff || 0}</b> obyvatel."""
+    <b>#{ig.utils.formatNumber feature.properties['obyv_2001'] || 0}</b> lidí,
+    je tu tedy <b>#direction #{ig.utils.formatNumber Math.abs feature.properties.diff || 0}</b> obyvatel."""
 
   reset: ->
     @content.html "Najeďte myší na oblast a zobrazí se vám počet obyvatel, kteří v ní žijí"
