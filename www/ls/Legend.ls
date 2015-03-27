@@ -5,8 +5,9 @@ colors =
 assignments = [0 1 1 2 3 3 4 4 5 6 7 8]
 class ig.Legend
   (@baseElement, features) ->
-    features = features.filter ->
-      it.properties.hexID in [444 445 472 473 501 502 529 530 558 559 586 587]
+    items = [438 437 456 455 471 470 488 487 504 503 519 518]
+    features = items.map ->
+      features[it]
     @element = @baseElement.append \div
       ..attr \class \legend
     width = 80
