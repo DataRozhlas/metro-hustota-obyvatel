@@ -70,7 +70,7 @@ hexes.addTo map
 
 ig.drawYear = (year) ->
   color := colorYear
-  toDisplay := "#{year}"
+  toDisplay := "obyv_#{year}"
   hexes.setStyle hexStyle
 
 ig.drawDiff = ->
