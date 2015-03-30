@@ -93,11 +93,15 @@ L.Icon.Default.imagePath = "https://samizdat.cz/tools/leaflet/images/"
 graphTip = new ig.GraphTip mapElement
 for let stop in ig.data.'metro-stops'.features
   latlng = L.latLng [stop.geometry.coordinates.1, stop.geometry.coordinates.0]
+  fillColor = if stop.properties.nazev in ['Bořislavka' 'Nádraží Veleslavín' 'Petřiny' 'Nemocnice Motol']
+    \#bbb
+  else
+    \#fff
   marker = L.circleMarker do
     * latlng
     * radius: 5
       color: \black
-      fillColor: \white
+      fillColor: fillColor
       opacity: 1
       fillOpacity: 1
   marker.on \mouseover ->
