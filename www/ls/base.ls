@@ -13,7 +13,7 @@ baseLayer = L.tileLayer do
   * "https://samizdat.cz/tiles/ton_b1/{z}/{x}/{y}.png"
   * zIndex: 1
     opacity: 1
-    attribution: 'data <a href="http://www.zzshmp.cz/" target="_blank">ZZS HMP</a>, mapová data &copy; přispěvatelé <a target="_blank" href="http://osm.org">OpenStreetMap</a>, obrazový podkres <a target="_blank" href="http://stamen.com">Stamen</a>, <a target="_blank" href="https://samizdat.cz">Samizdat</a>'
+    attribution: 'data <a href="https://www.czso.cz/" target="_blank">ČSÚ</a>, mapová data &copy; přispěvatelé <a target="_blank" href="http://osm.org">OpenStreetMap</a>, obrazový podkres <a target="_blank" href="http://stamen.com">Stamen</a>, <a target="_blank" href="https://samizdat.cz">Samizdat</a>'
 
 labelLayer = L.tileLayer do
   * "https://samizdat.cz/tiles/ton_l1/{z}/{x}/{y}.png"
@@ -116,3 +116,5 @@ for let stop in ig.data.'metro-stops'.features
 infobox = new ig.Infobox container
 
 ig.legend = new ig.Legend container, ig.data.grid.features
+
+embedLogo = new ig.EmbedLogo ig.containers.base, {dark: yes}
