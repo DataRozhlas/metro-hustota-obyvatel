@@ -6,7 +6,7 @@ map = L.map do
   * minZoom: 11,
     maxZoom: 16,
     zoom: 11
-    center: [50.0845, 14.496]
+    center: [50.0845, 14.45]
     maxBounds: [[49.89,14.14], [50.23,15.04]]
 
 baseLayer = L.tileLayer do
